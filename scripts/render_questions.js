@@ -13,7 +13,7 @@ let questionValues = [100, 200, 300, 400, 500];
  *      Need more help? Check out https://mzl.la/3lDHxIq or ask a volunteer.
  *
  * 3. Create an HTML string for each question. It should look like this:
- *      <div class='question'><div class='question-cell'>VALUE</div></div>
+ *      <div class='questions-column'><div class='question-cell'>VALUE</div></div>
  *
  * 4. Replace VALUE in each string with the question's value.
  *      For example, the $500 question would be:
@@ -36,14 +36,15 @@ let questionValues = [100, 200, 300, 400, 500];
  */
 function renderQuestions() {
   for (var i = 0; i < numCategories; i++) {
+    var questionCells = "<div class='questions-column'>" ;
     for (var v = 0; v < questionValues.length; v++) {
-      var questionCells =
-        "<div class='question'><div class='question-cell'>" +
+       questionCells +=
+        "<div class='question-cell' data-category=" + i + ">" +   
         questionValues[v] +
-        "</div></div>";
+        "</div>";
       console.log(questionValues[v]);
     }
+    questionCells += "</div>";
     $("#questions").append(questionCells);
   }
-  // Add code here
 }

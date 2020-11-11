@@ -41,5 +41,4 @@ function renderCategories() {
       "</div></div>";
     $("#categories").append(categoriesCell);
   }
-  // Add code here //
 }
