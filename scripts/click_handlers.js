@@ -40,7 +40,7 @@ function attachClickHandlers() {
     let categoryIndex = $(questionElement).attr("data-category");
     let moneyValue = $(questionElement).text().replace("$", "");
     $(questionElement).click(() => {
-      // Add code here
+      questionOnClick(categoryIndex, moneyValue)  
     });
   });
 }
