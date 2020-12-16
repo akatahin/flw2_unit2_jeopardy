@@ -17,12 +17,14 @@
 
 function renderScoringButtons() {
   $("#score").show();
+
   $("#correct-button").click(function () {
-    addToScore();
+    $("#current-score").html(addToScore());
   });
 
   $("#incorrect-button").click(function () {
-    subtractFromScore();
+    
+    $("#current-score").html(subtractFromScore());
   });
 
   $("#question-modal-show-answer").click(function () {
@@ -50,13 +52,14 @@ function renderScoringButtons() {
  *      HINT: Compute the new score and then call the helper function.
  */
 function subtractFromScore() {
-  // Add code here
-  var currentScore = getCurrentScore();
-  var updatedScore = currentScore - console.log(ran);
-  $;
+  let newScorer = getCurrentScore(); 
+  newScorer = newScorer - currentQuestionValue;
+  return newScorer;
+ 
 }
 
 function addToScore() {
-  // Add code here
-  getCurrentScore("currentQuestionValue");
+  let newScorer = getCurrentScore(); 
+  newScorer = newScorer + currentQuestionValue;
+  return newScorer;
 }
