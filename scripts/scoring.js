@@ -56,10 +56,10 @@ function subtractFromScore() {
   newScorer = newScorer - currentQuestionValue;
   return newScorer;
  
-}
+};
 
 function addToScore() {
   let newScorer = getCurrentScore(); 
   newScorer = newScorer + currentQuestionValue;
   return newScorer;
-}
+};
